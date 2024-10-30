@@ -89,8 +89,8 @@ ol {
 
 .search-form__textfield{
   appearance: none;
-  inline-size: 225px;
-  block-size: 27px;
+  min-inline-size: 225px;
+  min-block-size: 27px;
   background-color: transparent;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
@@ -106,6 +106,9 @@ ol {
 }
 
 .search-form__label{
+  display: flex;
+  align-items: center;
+  gap: 5px;
   cursor: pointer;
 }
 
@@ -156,6 +159,7 @@ ol {
   border: 1px solid #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
+  font-weight: 700;
   color: #fff;
 }
 
@@ -191,10 +195,9 @@ ol {
 }
 
 .title{
-  block-size: 210px;
   font-family: Oswald, sans-serif;
   font-size: 75px;
-  line-height: 71.5px;
+  line-height: 70px;
   text-transform: uppercase;
 }
 
@@ -218,6 +221,10 @@ ol {
   color: #fff;
   margin: 2px;
   padding: 2px;
+}
+
+.content__card-link:active{
+  background-color: #545050;
 }
 
 .content__card-link_current{
@@ -245,10 +252,14 @@ ol {
 }
 
 .content__video-card-title{
+  max-width: 198px;
   font-family: Oswald, sans-serif;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   padding-bottom: 6px;
 }
 
@@ -257,6 +268,8 @@ ol {
 }
 
 .content__video-card-thumbnail{
+  object-fit: cover;
+  object-position: center;
   inline-size: 194px;
   block-size: 103px;
   background-size: contain;
